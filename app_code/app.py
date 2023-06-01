@@ -2,20 +2,20 @@ import tkinter as tk
 import ttkbootstrap as ttk
 
 
-# -------------------------------------------CONVERSION------------------------------------------
+# [CONVERSION]
 def convert():
     mile_input = entry_int.get()
     km_output = mile_input * 1.61
     output_string.set(km_output)
 
 
-# ---------------------------------------------WINDOW--------------------------------------------
+# [WINDOW]
 window = ttk.Window(themename='journal')
 window.title('Miles Conversion')
 window.geometry('350x200')
 
-#---------------------------------------------WIDGETS--------------------------------------------
-# TITLE
+# [WIDGETS]
+# title
 title_label = ttk.Label(
     master=window, 
     text ='Miles to Kilometers', 
@@ -23,7 +23,7 @@ title_label = ttk.Label(
     )
 title_label.pack()
 
-# INPUT
+# input
 entry_int = tk.IntVar()
 input_frame = ttk.Frame(master=window)
 
@@ -40,7 +40,7 @@ input_frame.pack(pady=10)
 entry.pack(pady=5)
 button.pack()
 
-# OUTPUT
+# output
 output_string = tk.StringVar()
 
 output_label = ttk.Label(
@@ -51,5 +51,5 @@ output_label = ttk.Label(
     )
 output_label.pack(pady=5)
 
-# -------------------------------------------RUN WINDOW------------------------------------------ 
+# [RUN WINDOW]
 window.mainloop()
